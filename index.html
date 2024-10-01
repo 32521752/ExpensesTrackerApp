@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        
+        <!-- Expense form -->
+        <form id="expense-form">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Others">Others</option>
+            </select>
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- Total Expense Display -->
+        <div id="total-expense">Total Expense: $0.00</div>
+
+        <!-- Expense List -->
+        <div id="expense-list"></div>
+
+        <!-- Graphical Chart -->
+        <canvas id="expense-chart" width="400" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
